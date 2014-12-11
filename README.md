@@ -25,6 +25,7 @@ Deploy GIT url: https://git.heroku.com/sleepy-crag-4702.git
 Pasos a seguir:
 
 git clone  https://git.heroku.com/sleepy-crag-4702.git glob
+
  -- hago cambios (pongo lo del repo de github)
  git add .
  git commit -m"deploy"
