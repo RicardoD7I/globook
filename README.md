@@ -31,3 +31,6 @@ git clone  https://git.heroku.com/sleepy-crag-4702.git glob
  git push origin master
 
 
+MongoDB Server: (en https://app.compose.io )
+
+mongodb://globook:1234567@dogen.mongohq.com:10042/node_globook
