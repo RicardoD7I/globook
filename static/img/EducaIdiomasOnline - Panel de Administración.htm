@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="no-js ui-mobile" lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/count.php" async=""></script><!-- base href="http://aldoaldo.site40.net/admin/libreria.php" -->
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EducaIdiomasOnline - Panel de Administración</title>
+    <link href="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/estilos.css">
+    <script src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/jquery_004.js"></script>
+    <script src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/bootstrap.js"></script>
+    <script src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/jquery-ui.js"></script>
+    <link rel="stylesheet" href="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/jquery.css" type="text/css">
+    <script type="text/javascript">
+		$(document).bind("mobileinit", function(){
+			$.extend(  $.mobile , {
+				ajaxEnabled: false,
+				defaultPageTransition: 'none'
+			});
+		});
+	</script>
+    <script src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/jquery_006.js"></script>
+	<script src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/jquery_005.js"></script>
+	<script src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/jquery_003.js"></script>
+		<script src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/jquery_002.js"></script>
+		<script src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/jquery.js"></script>
+
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a"><div style="min-height: 513px;" class="ui-page ui-page-theme-a ui-page-active" tabindex="0" data-url="/admin/libreria.php" data-role="page">
+    <div class="container">
+    	<div class="well header-well">
+    <h1>
+        <a class="ui-link" href="http://aldoaldo.site40.net/">EducaIdiomasOnline</a> - Panel de administración
+    </h1>
+
+    <div class="btn-group">
+        <button role="button" class="btn ui-btn ui-shadow ui-corner-all">Fede</button>
+        <button role="button" class="btn dropdown-toggle ui-btn ui-shadow ui-corner-all" data-toggle="dropdown">
+        <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="ui-link" href="http://aldoaldo.site40.net/admin/index.php?action=password">Cambiar contraseña</a></li>
+            <li class="divider"></li>
+          <li><a class="ui-link" href="http://aldoaldo.site40.net/admin/login.php?action=logout">Cerrar sesión</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="well hidden-sm hidden-md hidden-lg toggle_nav_custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button role="button" type="button" class="navbar-toggle ui-btn ui-shadow ui-corner-all" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Ocultar / Mostrar menú</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+</div>
+        
+         <div class="well box">
+              <nav>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav nav-tabs">
+			<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/index.php">Inicio</a></li>
+			<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/courses.php" rel="external">Contenido <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/courses.php" rel="external">Lista de Contenido</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/courses.php?action=new" rel="external">Agregar Contenido</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/tbl_cursos.php" rel="external">Tabla Cursos <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/tbl_cursos.php" rel="external">Lista</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/tbl_cursos.php?action=new" rel="external">Agregar</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/home_slideshow.php" rel="external">Slide-Home <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/home_slideshow.php" rel="external">Listado de Slides</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/home_slideshow.php?action=new" rel="external">Agregar Slide</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/categorias.php" rel="external">Cursos y Categorías <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/categorias.php" rel="external">Listado</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/categorias.php?action=new" rel="external">Agregar</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/banners.php" rel="external">Banners <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/banners.php" rel="external">Listado de Banners</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/banners.php?action=new" rel="external">Agregar Banner</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/secciones.php" rel="external">Secciones <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/secciones.php" rel="external">Listado de Secciones</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/secciones.php?action=new" rel="external">Agregar Sección</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/clientes.php" rel="external">Clientes <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/clientes.php" rel="external">Listado de Clientes</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/clientes.php?action=new" rel="external">Agregar Cliente</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/testimonios.php" rel="external">Testimonios <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/testimonios.php" rel="external">Listado de Testimonios</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/testimonios.php?action=new" rel="external">Agregar Testimonio</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/representantes.php" rel="external">Representantes <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/representantes.php" rel="external">Listado de Representantes</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/representantes.php?action=new" rel="external">Agregar Representante</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/galerias.php" rel="external">Galerías <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/galerias.php" rel="external">Listado de Galerías</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/galerias.php?action=new" rel="external">Agregar Galería</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/libreria.php" rel="external">Libreria <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/libreria.php" rel="external">Listado de Libros</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/libreria.php?action=new" rel="external">Agregar Libro</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/noticias.php" rel="external">Noticias <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/noticias.php" rel="external">Listado de Noticias</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/noticias.php?action=new" rel="external">Agregar Noticia</a></li>
+</ul></li>
+<li class="dropdown"><a class="dropdown-toggle ui-link" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="http://aldoaldo.site40.net/admin/agenda.php" rel="external">Agenda <b class="caret"></b></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a class="ui-link" href="http://aldoaldo.site40.net/admin/agenda.php" rel="external">Listado de Agenda</a></li>
+<li><a class="ui-link" href="http://aldoaldo.site40.net/admin/agenda.php?action=new" rel="external">Agregar en Agenda</a></li>
+</ul></li>
+		</ul>
+	</div>
+  </nav>
+  <div style="clear:both"></div>
+                        <div class="contenido row">
+                <div class="col-sm-12">
+
+
+
+                <div class="well row" style="margin-left:0;margin-right:0;background:#f0f0f0">
+	                <div class="form-horizontal col-sm-6">
+		                <label for="inputFilter" class="col-sm-2 control-label">Filtrar:</label>
+		                <div class="col-sm-10">
+			                <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input class="form-control input-sm" id="inputFilter" placeholder="Filtrar..." type="text"></div>
+		                </div>
+	                </div>
+	                <div class="col-sm-6" style="text-align:right">
+		                <a href="http://aldoaldo.site40.net/admin/libreria.php?action=new" class="btn btn-primary ui-link"><i class="fa fa-plus"></i>  Añadir Libro</a>
+	                </div>
+                </div>
+                <div class="separador">&nbsp;</div>
+                
+                
+
+                    <table id="sort" class="table table-striped">
+                        <!-- On rows -->
+                        <thead>
+                            <tr class="active">
+                                <th></th>
+							    <th class="">'Titulo</th>
+                                <td class="center">Autor</td>
+                                <td class="center">Editorial</td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+						    </tr>
+                        </thead>
+<thead>
+                                    <tr class="active">
+                                        <th></th>
+								        <th class="center">fede</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+								    </tr>
+                                </thead><tbody class="ui-sortable"><tr id="libreria_29">
+                                        <td class="hidden-xs"><img src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/10562897_725902054140577_1515070487_o_008.jpg" class="img-responsive"></td>
+								        <td width="80%">aaaaaa</td>
+                                        <td class="center">adsf</td>
+                                        <td class="center">asdfº</td>
+                                        <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=edit&amp;id=29" class="btn btn-primary ui-link"><span class="glyphicon glyphicon-wrench"></span></a></td>
+                                        <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=delete&amp;id=29" class="btn btn-danger ui-link" onclick="return confirm(" ¿seguro="" que="" desea="" eliminar="" este="" libro?");"=""><span class="glyphicon glyphicon-trash"></span></a></td>
+                                    </tr></tbody><thead>
+                                    <tr class="active">
+                                        <th></th>
+								        <th class="center">julio</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+								    </tr>
+                                </thead><tbody class="ui-sortable"><tr id="libreria_30">
+                                        <td class="hidden-xs"><img src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/10562897_725902054140577_1515070487_o_009.jpg" class="img-responsive"></td>
+								        <td width="80%">fede</td>
+                                        <td class="center">fede</td>
+                                        <td class="center">fede</td>
+                                        <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=edit&amp;id=30" class="btn btn-primary ui-link"><span class="glyphicon glyphicon-wrench"></span></a></td>
+                                        <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=delete&amp;id=30" class="btn btn-danger ui-link" onclick="return confirm(" ¿seguro="" que="" desea="" eliminar="" este="" libro?");"=""><span class="glyphicon glyphicon-trash"></span></a></td>
+                                    </tr>                        </tbody><tbody class="ui-sortable">
+                            <tr id="libreria_28">
+								<td class="hidden-xs"><img src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/10562897_725902054140577_1515070487_o_005.jpg" class="img-responsive"></td>
+								<td width="80%">aldo</td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=edit&amp;id=28" class="btn btn-primary ui-link"><span class="glyphicon glyphicon-wrench"></span></a></td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=delete&amp;id=28" class="btn btn-danger ui-link" onclick="return confirm('¿Seguro que desea eliminar este libro?');"><span class="glyphicon glyphicon-trash"></span></a></td>
+                            </tr>
+                            <tr id="libreria_30">
+								<td class="hidden-xs"><img src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/10562897_725902054140577_1515070487_o_009.jpg" class="img-responsive"></td>
+								<td width="80%">fede</td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=edit&amp;id=30" class="btn btn-primary ui-link"><span class="glyphicon glyphicon-wrench"></span></a></td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=delete&amp;id=30" class="btn btn-danger ui-link" onclick="return confirm('¿Seguro que desea eliminar este libro?');"><span class="glyphicon glyphicon-trash"></span></a></td>
+                            </tr>
+                            <tr id="libreria_29">
+								<td class="hidden-xs"><img src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/10562897_725902054140577_1515070487_o_008.jpg" class="img-responsive"></td>
+								<td width="80%">aaaaaa</td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=edit&amp;id=29" class="btn btn-primary ui-link"><span class="glyphicon glyphicon-wrench"></span></a></td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=delete&amp;id=29" class="btn btn-danger ui-link" onclick="return confirm('¿Seguro que desea eliminar este libro?');"><span class="glyphicon glyphicon-trash"></span></a></td>
+                            </tr>
+                            <tr id="libreria_15">
+								<td class="hidden-xs"><img src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/Chrysanthemum.jpg" class="img-responsive"></td>
+								<td width="80%">Libro2_(prueba)</td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=edit&amp;id=15" class="btn btn-primary ui-link"><span class="glyphicon glyphicon-wrench"></span></a></td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=delete&amp;id=15" class="btn btn-danger ui-link" onclick="return confirm('¿Seguro que desea eliminar este libro?');"><span class="glyphicon glyphicon-trash"></span></a></td>
+                            </tr>
+                            <tr id="libreria_25">
+								<td class="hidden-xs"><img src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/10011690_967309873285655_3824792085165967503_o_001.jpg" class="img-responsive"></td>
+								<td width="80%">saf</td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=edit&amp;id=25" class="btn btn-primary ui-link"><span class="glyphicon glyphicon-wrench"></span></a></td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=delete&amp;id=25" class="btn btn-danger ui-link" onclick="return confirm('¿Seguro que desea eliminar este libro?');"><span class="glyphicon glyphicon-trash"></span></a></td>
+                            </tr>
+                            <tr id="libreria_17">
+								<td class="hidden-xs"><img src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/Hydrangeas.jpg" class="img-responsive"></td>
+								<td width="80%">Libro3_(prueba)</td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=edit&amp;id=17" class="btn btn-primary ui-link"><span class="glyphicon glyphicon-wrench"></span></a></td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=delete&amp;id=17" class="btn btn-danger ui-link" onclick="return confirm('¿Seguro que desea eliminar este libro?');"><span class="glyphicon glyphicon-trash"></span></a></td>
+                            </tr>
+                            <tr id="libreria_11">
+								<td class="hidden-xs"><img src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/arte_lylian_001.jpg" class="img-responsive"></td>
+								<td width="80%">Libro1_(prueba)</td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=edit&amp;id=11" class="btn btn-primary ui-link"><span class="glyphicon glyphicon-wrench"></span></a></td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=delete&amp;id=11" class="btn btn-danger ui-link" onclick="return confirm('¿Seguro que desea eliminar este libro?');"><span class="glyphicon glyphicon-trash"></span></a></td>
+                            </tr>
+                            <tr id="libreria_22">
+								<td class="hidden-xs"><img src="EducaIdiomasOnline%20-%20Panel%20de%20Administraci%C3%B3n_archivos/arte_lylian.jpg" class="img-responsive"></td>
+								<td width="80%">madres visibles</td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=edit&amp;id=22" class="btn btn-primary ui-link"><span class="glyphicon glyphicon-wrench"></span></a></td>
+                                <td class="center"><a href="http://aldoaldo.site40.net/admin/libreria.php?action=delete&amp;id=22" class="btn btn-danger ui-link" onclick="return confirm('¿Seguro que desea eliminar este libro?');"><span class="glyphicon glyphicon-trash"></span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+            <footer class="well clear">
+        <div class="left">© 2014 <a class="ui-link" href="http://aldoaldo.site40.net/">EducaIdiomasOnline</a></div>
+        <div class="right"><p>Desarrollo <a class="ui-link" href="http://www.conceptovisualweb.com/">Conceptovisual</a></p></div>
+    </footer>
+    </div>
+        
+
+
+
+
+
+
+<!-- End Of Analytics Code -->
+</div><div style="top: 257.5px;" class="ui-loader ui-corner-all ui-body-a ui-loader-default ui-loader-fakefix"><span class="ui-icon-loading"></span><h1>loading</h1></div></body></html>
+<!-- Hosting24 Analytics Code -->
