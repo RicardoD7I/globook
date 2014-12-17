@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
+var config = require('./configDb');
 
-//String connection
-var connectionString = 'mongodb://globook:1234567@dogen.mongohq.com:10042/node_globook';
+var connectionString = config.dbString;
 
-moongose.connect(connectionString);
+mongoose.connect(connectionString);
 
 mongoose.connection.on('connected', function(){
 	console.log('Coneccion hecha a ' + connectionString);
