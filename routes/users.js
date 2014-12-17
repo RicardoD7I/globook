@@ -1,11 +1,24 @@
 var express = require('express');
 var router = express.Router();
+var user = require('../model/user');
 
 /* GET users listing. */
-router.get('/', function(req, res) {
-  res.send('respond with a resource');
+
+var loginUser = function(req, res){
+	user.findOne({'userName': 'admin', 'password': 'admin'},function(err, userlogged){
+		if (err) {
+			console.log('ERROR: ' + err);
+		} else {
+			console.log (userlogged.userName);
+		}
+	});
+};
+
+
+router.POST('/authenticate', loginUser);
+
+	
 });
 
-//routes.get('/');
-
+/* POST loguear */
 module.exports = router;
