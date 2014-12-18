@@ -21,11 +21,11 @@
 			<form class="col-xs-12 col-md-12" action="">
 				<div class="form-group">
 					<!--<label for="user">User</label>-->
-					<input class="form-control" type="text" name="user" placeholder="User">			
+					<input id="usernameInput" class="form-control" type="text" name="user" placeholder="User">			
 				</div>
 				<div class="form-group">
 					<!--<label for="pass">Password</label>-->
-					<input class="form-control" type="password" name="pass" placeholder="Password">		
+					<input id="passwordInput"  class="form-control" type="password" name="pass" placeholder="Password">		
 				</div>
 				<div class="form-group">
 					<button class="btn btn-success pull-right">Entrar</button><br/>		
@@ -36,7 +36,20 @@
 		<!-- COLUMNA DERECHA -->
 
 		<section class="col-xs-12 col-md-9 col_der">
-			<button class="btn btn-success pull-right">Refresh</button><!--REFRESH BUTTON-->
+
+		    <button class="btn btn-success pull-right">Refresh</button><!--REFRESH BUTTON-->
+
+	        <article id="formulario"  class="well col-xs-12 col-md-12 sombra hidden">
+				<img src="img/user_pic.jpg" class="img-circle col-xs-3 col-md-2" alt="" >
+				<div class="col-xs-12 col-md-9">
+					<h2>Nombre Apellido</h2>								
+	        		<form action="">
+	        			<textarea name="content" class="form-control" cols="30" rows="3"></textarea>
+	        		</form>
+	        		<button class="btn btn-success pull-right">Publicar!</button><!--PUBLICAR BUTTON-->
+				</div>	
+			</article>
+			
 			<article class="well col-xs-12 col-md-12 sombra">
 				<img src="img/user_pic.jpg" class="img-circle col-xs-3 col-md-2" alt="" >
 				<div class="col-xs-12 col-md-9">
