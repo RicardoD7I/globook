@@ -5,9 +5,11 @@
 	<title>Globook || Iniciar Sesion</title>
 	<link href="/stylesheets/bootstrap.css" rel="stylesheet">
 	<link href="/stylesheets/style.css" rel="stylesheet">
-	<script type="text/javascript"  src="js/jquery.js"></script>
-	<script type="text/javascript" src="Utils/publish_or_not_publish.jquery.js" ></script>
-    <script src="js/amplify.min.js"></script>
+	<script src="/js/amplify.min.js"></script>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/comunication.js"></script>
+	<script src="/js/security.js"></script>
+	<script src="/Utils/publish_or_not_publish.jquery.js" ></script>
 </head>
 
 <body>
@@ -62,7 +64,19 @@
 	</div>
 
 
-     <script src="/js/jquery.js"></script>
-     <script src="/js/security.js"></script>
+     
+     <script type="text/javascript">
+
+ /******* ESTO DEBERIA IR EN UN NUEVO SCRIPT EXTERNO A LAYOUT ********/
+			amplify.subscribe("pageLoaded",function(){
+					$('#loader').plug(true);
+			});
+            
+		    
+		    amplify.publish("onUserReady");
+		    amplify.publish("onPubReady");
+/**********************************************************************/
+
+     </script>
 </body>
 </html>
