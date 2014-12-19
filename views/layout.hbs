@@ -11,14 +11,17 @@
 </head>
 
 <body>
-	<div id="loader"></div>
+	<!-- 
+	<div id="loader"></div>-->
 	<div class="container">
 
 		<!-- COLUMNA IZQUIERDA -->
 
 		<section class="col-xs-4 col-md-3 col_izq sombra">
-			<img src="img/user_pic.jpg" class="img-circle col-xs-12 col-md-12" alt="">
-			<form class="col-xs-12 col-md-12" action="">
+			<img id="userImg" src="img/user_pic.jpg" class="img-circle col-xs-12 col-md-12" alt="">
+
+			<h3 id="userNameAndSurname"></h3>
+			<form id="loginForm" class="col-xs-12 col-md-12" action="#">
 				<div class="form-group">
 					<!--<label for="user">User</label>-->
 					<input id="usernameInput" class="form-control" type="text" name="user" placeholder="User">			
@@ -31,6 +34,7 @@
 					<button id="loginButton" class="btn btn-success pull-right">Entrar</button><br/>		
 				</div>
 			</form>
+			<button id="logoutButton" class="btn btn-success pull-right hidden">Entrar</button><br/>		
 		</section><!-- fin COLUMNA IZQUIERDA -->
 
 		<!-- COLUMNA DERECHA -->
@@ -40,14 +44,14 @@
 		    <button class="btn btn-success pull-right">Refresh</button><!--REFRESH BUTTON-->
 
 	        <article id="formulario"  class="well col-xs-12 col-md-12 sombra hidden">
-				<img src="img/user_pic.jpg" class="img-circle col-xs-3 col-md-2" alt="" >
-				<div class="col-xs-12 col-md-9">
-					<h2>Nombre Apellido</h2>								
+
+
 	        		<form action="">
 	        			<textarea name="content" class="form-control" cols="30" rows="3"></textarea>
+	        			<button class="btn btn-success pull-right">Publicar!</button><!--PUBLICAR BUTTON-->
 	        		</form>
-	        		<button class="btn btn-success pull-right">Publicar!</button><!--PUBLICAR BUTTON-->
-				</div>	
+	        		
+
 			</article>
 
 			<article class="well col-xs-12 col-md-12 sombra">
@@ -64,5 +68,6 @@
 
      <script src="/js/jquery.js"></script>
      <script src="/js/security.js"></script>
+     <script src="/js/userInfoView.js"></script>
 </body>
 </html>
