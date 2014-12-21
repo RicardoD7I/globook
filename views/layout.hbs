@@ -1,7 +1,50 @@
-doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Globook || Iniciar Sesion</title>
+	<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+	<link href="/stylesheets/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+
+		<!-- COLUMNA IZQUIERDA -->
+
+		<section class="col-xs-4 col-md-3 col_izq sombra">
+			<img src="img/user_pic.jpg" class="img-circle col-xs-12 col-md-12" alt="">
+			<form class="col-xs-12 col-md-12" action="">
+				<div class="form-group">
+					<!--<label for="user">User</label>-->
+					<input class="form-control" type="text" name="user" placeholder="User">			
+				</div>
+				<div class="form-group">
+					<!--<label for="pass">Password</label>-->
+					<input class="form-control" type="password" name="pass" placeholder="Password">		
+				</div>
+				<div class="form-group">
+					<button class="btn btn-success pull-right">Entrar</button><br/>		
+				</div>
+			</form>
+		</section><!-- fin COLUMNA IZQUIERDA -->
+
+		<!-- COLUMNA DERECHA -->
+
+		<section class="col-xs-12 col-md-9 col_der">
+			<button class="btn btn-success pull-right">Refresh</button><!--REFRESH BUTTON-->
+			<article class="well col-xs-12 col-md-12 sombra">
+				<img src="img/user_pic.jpg" class="img-circle col-xs-3 col-md-2" alt="" >
+				<div class="col-xs-12 col-md-9">
+					<h2>Nombre Apellido</h2>					
+					<p><small><i>09 de Diciembre - 18:00 hs</i></small></p>					
+	        		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+				</div>		
+			</article>
+		</section><!-- fin COLUMNA DERECHA -->	
+	</div>
+
+
+     <script src="/js/jquery.js"></script>
+     <script src="/js/security.js"></script>
+</body>
+</html>
