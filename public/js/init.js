@@ -1,14 +1,17 @@
 $( document ).ready(function() {
+
+	var username = $("body").data("username");
+
 	$.ajax({
-		 type: "POST",
-		 url: "publish", 
+		 type: "GET",
+		 url: "/publicacion/"  + username, 
 	}).done(function( data ) {
 	   	amplify.publish( "readyAjaxPublicaciones", data );
 	});
 
 	$.ajax({
-		 type: "POST",
-		 url: "username",
+		 type: "GET",
+		 url: "/users/info/" + username,
 	}).done(function( data ) {
 	   	amplify.publish( "readyAjaxUsuario", data );
 	});

@@ -1,7 +1,9 @@
 var readyUserData = false;
 var readyPub = false;
 
-amplify.subscribe("onUserReady", function () {
+// usar promises o timer
+
+amplify.subscribe("readyAjaxUsuario", function () {
     if (readyPub) {
         amplify.publish("pageLoaded");
     } else {
@@ -9,7 +11,7 @@ amplify.subscribe("onUserReady", function () {
     }
 });
 
-amplify.subscribe("onPubReady", function () {
+amplify.subscribe("readyAjaxPublicaciones", function () {
     if (readyUserData) {
         amplify.publish("pageLoaded");
     } else {

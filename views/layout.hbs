@@ -11,9 +11,10 @@
 	<script src="/js/security.js"></script>
 	<script src="/js/userInfoView.js"></script>
 	<script src="/Utils/publish_or_not_publish.jquery.js" ></script>
+	<script src="/js/init.js"></script>
 </head>
 
-<body>
+<body data-username="{{userName}}">
 	
 	<div id="loader"></div>
 	<div class="container">
@@ -21,7 +22,7 @@
 		<!-- COLUMNA IZQUIERDA -->
 
 		<section class="col-xs-4 col-md-3 col_izq sombra">
-			<img id="userImg" src="img/user_pic.jpg" class="img-circle col-xs-12 col-md-12" alt="">
+			<img id="userImg" src="/img/user_pic.jpg" class="img-circle col-xs-12 col-md-12" alt="">
 
 			<h3 id="userNameAndSurname"></h3>
 			<form id="loginForm" class="col-xs-12 col-md-12" action="#">
@@ -56,15 +57,16 @@
 	        		
 
 			</article>
-
+<!-- 
 			<article class="well col-xs-12 col-md-12 sombra">
-				<img src="img/user_pic.jpg" class="img-circle col-xs-3 col-md-2" alt="" >
+				<img src="/img/user_pic.jpg" class="img-circle col-xs-3 col-md-2" alt="" >
 				<div class="col-xs-12 col-md-9">
 					<h2>Nombre Apellido</h2>					
 					<p><small><i>09 de Diciembre - 18:00 hs</i></small></p>					
 	        		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
 				</div>		
 			</article>
+-->
 		</section><!-- fin COLUMNA DERECHA -->	
 	</div>
 
@@ -79,8 +81,8 @@
 			});
             
 		    
-		    amplify.publish("onUserReady");
-		    amplify.publish("onPubReady");
+		    amplify.publish("readyAjaxUsuario");
+		    amplify.publish("readyAjaxPublicaciones");
 /**********************************************************************/
 
      </script>

@@ -9,8 +9,9 @@ mongoose.connection.on('connected', function(){
 	console.log('Coneccion hecha a ' + connectionString);
 });
 
-mongoose.connection.on('error', function(){
+mongoose.connection.on('error', function(error){
 	console.log('No se pudo establecer la coneccion a ' + connectionString);
+	console.log(error)
 });
 
 mongoose.connection.on('disconnected', function(){

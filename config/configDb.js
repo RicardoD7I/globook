@@ -1,3 +1,3 @@
 module.exports = {
-	dbString: 'mongodb:globook:1234567@dogen.mongohq.com:10042/node_globook'
+	dbString: 'mongodb://globook:12345678@ds027771.mongolab.com:27771/globook'
 };
