@@ -3,6 +3,8 @@ var config = require('./configDb');
 
 var connectionString = config.dbString;
 
+require("../model/user.js");
+
 mongoose.connect(connectionString);
 
 mongoose.connection.on('connected', function(){

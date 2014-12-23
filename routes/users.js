@@ -5,21 +5,77 @@ var User = require('../model/user');
 /**
 POST: Servicio de autenticacion.
 */
+
+
+/*/
+
+Desde POSTMAN:
+
+{
+  "username": "ricardo",
+  "password": "abc"
+}
+
+Con url: http://localhost:3000/users/authenticate
+Headers: 
+
+Content-Type  application/json
+
+*/
+
+
+/*
+
+// Codigo para agregar user:
+var newUser = new User()
+newUser.userName = "admin";
+newUser.password = "admin";
+newUser.token = "lalala";
+
+newUser.save(
+  function(err){
+ console.log("SAVED!")
+  }
+);
+*/
+
 var loginUser = function(req, res){
 
 	console.log('POST method /authenticate');
 
-	User.find({userName: 'admin', password: 'admin'},function(err, userlogged){
+	var username = req.param("username");
+	var password = req.param("password");
+	// debug: llega "username" y "password"
+	console.log(username)
+	console.log(password)
+
+	User.findOne({userName: username, password: password},function(err, userlogged){
+		
 		if (err) {
-			return console.err('ERROR: ' + err);
+			res.json({
+				"error" : "ERROR!"
+			});
 		} else {
-			console.log ('--------------------------------');
-			console.log(userlogged);
-			console.log ('--------------------------------');
-		}
+			  var  response = {
+			  	isValid : false,
+			  	token: ""
+			  }
+
+			  console.log(userlogged)
+			  if (userlogged) {
+			  	var token = Math.floor((Math.random() * 10000000) + 1);
+					response.isValid = true;
+					response.token = token;
+
+					// @todo: codigo para save token
+					// ...
+			   }
+
+			   res.json(response);
+			}
 	});
 
-	res.send(User);
+	
 
 };
 
