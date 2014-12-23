@@ -1,24 +1,29 @@
 var express = require('express');
 var router = express.Router();
-var user = require('../model/user');
+var User = require('../model/user');
 
-/* GET users listing. */
-
+/**
+POST: Servicio de autenticacion.
+*/
 var loginUser = function(req, res){
-	user.findOne({'userName': 'admin', 'password': 'admin'},function(err, userlogged){
+
+	console.log('POST method /authenticate');
+
+	User.find({userName: 'admin', password: 'admin'},function(err, userlogged){
 		if (err) {
-			console.log('ERROR: ' + err);
+			return console.err('ERROR: ' + err);
 		} else {
-			console.log (userlogged.userName);
+			console.log ('--------------------------------');
+			console.log(userlogged);
+			console.log ('--------------------------------');
 		}
 	});
+
+	res.send(User);
+
 };
 
+//Cambiado a get para probar con el navegador
+router.post('/authenticate', loginUser);
 
-router.POST('/authenticate', loginUser);
-
-	
-});
-
-/* POST loguear */
 module.exports = router;

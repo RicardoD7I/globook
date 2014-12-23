@@ -7,6 +7,10 @@ mongoose.connect(connectionString);
 
 mongoose.connection.on('connected', function(){
 	console.log('Coneccion hecha a ' + connectionString);
+	mongoose.connection.db.collectionNames(function (err, names) {
+        console.log(names); // [{ name: 'dbname.myCollection' }]
+        module.exports.Collection = names;
+    });
 });
 
 mongoose.connection.on('error', function(){

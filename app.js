@@ -8,7 +8,7 @@ var _ = require('lodash');
 var dataBase = require('./config/dbConfig');
 
 var routes = require('./routes/index');
-//var users = require('./routes/users');
+var users = require('./routes/users');
 //var publicacion = require('./routes/publicacion');
 
 var app = express();
@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-//app.use('/users', users);
+app.use('/users', users);
 //app.use('/publicacion', publicacion);
 
 // catch 404 and forward to error handler
