@@ -33,3 +33,5 @@ var populate = function(req, res){
 };
 
 router.post('/populateUsers', populate);
+
+module.exports = router;
