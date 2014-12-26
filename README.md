@@ -32,6 +32,11 @@ Pasos a seguir:
 - git push origin master
 
 
-MongoDB Server: (en https://app.compose.io )
+MongoDB Server: (en https://mongolab.com/ )
 
-mongodb://globook:1234567@dogen.mongohq.com:10042/node_globook
+  mongodb://globook:12345678@ds027771.mongolab.com:27771/globook
+
+Cuenta en MongoLAB:
+
+ricardod7i@hotmail.com
+abc123456

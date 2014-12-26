@@ -1,13 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res) {
-  res.send('respond with a resource');
-  require
-});
-router.post('/', require("./publicacion/publicacion"));
+// definir rutas
+router.get('/:userName', require("./publicacion/publicacionGet"));
+router.post('/:userName', require("./publicacion/publicacionPost"));
 
-//routes.get('/');
-
+// exportarlas
 module.exports = router;
