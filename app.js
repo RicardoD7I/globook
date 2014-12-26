@@ -8,8 +8,10 @@ var _ = require('lodash');
 var dataBase = require('./config/dbConfig');
 
 var routes = require('./routes/index');
+
 var users = require('./routes/users');
-var publicacion = require('./routes/publicacion');
+var populate = require('./routes/populateUsers');
+//var publicacion = require('./routes/publicacion');
 
 var app = express();
 
@@ -27,7 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/publicacion', publicacion);
+app.use('/populate', populate);
+//app.use('/publicacion', publicacion);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
