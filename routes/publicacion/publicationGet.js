@@ -27,7 +27,6 @@ var getPublication = function(req, res) {
 						"error" : "ERROR: Error al intentar recuperar las publicaciones del usuario."
 					});
 				} else {
-					console.log(publications);
 					return res.send(publications);
 				}
 			});
