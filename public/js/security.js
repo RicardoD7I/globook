@@ -7,9 +7,17 @@
     $("#logoutButton").hide();
     $("#loginForm").show();
   } else {
-    $("#logoutButton").show();
     $("#loginForm").hide();
+    $("#formulario").removeClass("hidden");
+    $("#logoutButton").removeClass("hidden");
   }
+
+  // logout
+  $("#logoutButton").on("click",function(evt){
+    evt.preventDefault();
+    amplify.store("userToken", null);
+    location.reload();
+  })
   
   $("#loginButton").on("click", function(evt){
 
@@ -41,8 +49,11 @@
           amplify.store("userToken", data.token)
           
            $("#formulario").removeClass("hidden");
+           $("#logoutButton").removeClass("hidden").show();
+           $("#loginForm").hide();
         } else {
-          amplify.store("userToken", null)
+          alert("Usuario o contraseña invalida");
+          //amplify.store("userToken", null)
         }
 
 

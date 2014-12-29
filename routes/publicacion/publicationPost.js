@@ -7,7 +7,7 @@ var postPublication = function(req, res) {
 
 	console.log('POST method /publicacionPost');
 
-	var userName = req.params.userName;
+	var userName = req.param("userName");
 	var token = req.param("token");
 
 	User.findOne({userName: userName, token: token}, function(err, userLogged) {

@@ -48,18 +48,19 @@ var loginUser = function(req, res){
 
 var getUserData = function(req, res){
 
-	console.log('GET method /authenticate');
+	console.log('GET method /getUserData');
 
-	var userName = req.params.userName;
+	var userName = req.param("userName");
 
 	User.findOne({userName: userName}, function(err, userLogged) {
+		console.log("ACA")
 		if (err) {
 			console.log('ERROR: Hubo un problema al consultar el usuario en la BBDD');
-			return res.json({
+			res.json({
 				"error" : "ERROR: Error al intentar recuperar el usuario de la base de datos."
 			});
 		} else {
-			return res.send(userLogged); 
+			res.json(userLogged); 
 		}
 	});
 

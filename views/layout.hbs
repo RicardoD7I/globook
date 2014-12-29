@@ -14,6 +14,7 @@
 	<script src="/js/renderPubs.js"></script>
 	<script src="/js/init.js"></script>
 	<script src="/Utils/loadingPublish.js"></script>
+	<script src="/js/publicarPost.js"></script>
 
 </head>
 
@@ -41,21 +42,22 @@
 					<button id="loginButton" class="btn btn-success pull-right">Entrar</button><br/>		
 				</div>
 			</form>
-			<button id="logoutButton" class="btn btn-success pull-right hidden">Entrar</button><br/>		
+			<button id="logoutButton" class="btn btn-success pull-right hidden">Logout</button><br/>		
 		</section><!-- fin COLUMNA IZQUIERDA -->
 
 		<!-- COLUMNA DERECHA -->
 
 		<section class="col-xs-12 col-md-9 col_der">
 
-		    <button class="btn btn-success pull-right">Refresh</button><!--REFRESH BUTTON-->
+		    <!--<button class="btn btn-success pull-right">Refresh</button>REFRESH BUTTON-->
 
 	        <article id="formulario"  class="well col-xs-12 col-md-12 sombra hidden">
 
 
 	        		<form action="">
-	        			<textarea name="content" class="form-control" cols="30" rows="3"></textarea>
-	        			<button class="btn btn-success pull-right">Publicar!</button><!--PUBLICAR BUTTON-->
+	        			<input id="postTitle" class="form-control" type="text" name="user" placeholder="Titulo">	
+	        			<textarea id="postText" name="content" class="form-control" cols="30" rows="3"></textarea>
+	        			<button id="publishPost" class="btn btn-success pull-right" style="margin-top:20px;">Publicar!</button><!--PUBLICAR BUTTON-->
 	        		</form>
 	        		
 

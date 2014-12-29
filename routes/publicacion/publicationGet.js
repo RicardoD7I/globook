@@ -7,7 +7,7 @@ var getPublication = function(req, res) {
 
 	console.log('GET method /publicacionGet');
 
-	var userName = req.params.userName;
+	var userName = req.param("userName");
 
 	console.log(userName);
 
@@ -19,16 +19,21 @@ var getPublication = function(req, res) {
 				"error" : "ERROR: Error al intentar recuperar el usuario de la base de datos."
 			});
 		} else {
-			Publication.find({ creator: userLogged._id }, function(error, publications){
-				if (err) {
-					console.log('ERROR: Error al intentar recuperar las publicaciones del usuario.');
-					return res.json({
-						"error" : "ERROR: Error al intentar recuperar las publicaciones del usuario."
-					});
-				} else {
-					return res.send(publications);
-				}
-			});
+			if (userLogged) {
+				Publication.find({ creator: userLogged._id }, function(error, publications){
+					if (err) {
+						console.log('ERROR: Error al intentar recuperar las publicaciones del usuario.');
+						return res.json({
+							"error" : "ERROR: Error al intentar recuperar las publicaciones del usuario."
+						});
+					} else {
+						return res.send(publications);
+					}
+				});
+			} else {
+				res.json({})
+			}
+
 		}
 	});
 

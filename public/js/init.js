@@ -6,14 +6,14 @@ $( document ).ready(function() {
 		 type: "GET",
 		 url: "/publicacion/"  + username, 
 	}).done(function( data ) {
-	   	amplify.publish( "readyAjaxPublicaciones", data );
+	   	amplify.publish( "onPubReady", data );
 	});
 
 	$.ajax({
 		 type: "GET",
-		 url: "/users/info/" + username,
+		 url: "/users/" + username,
 	}).done(function( data ) {
-	   	amplify.publish( "readyAjaxUsuario", data );
+	   	amplify.publish( "onUserReady", data );
 	});
   
 });
