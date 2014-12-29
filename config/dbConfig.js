@@ -4,6 +4,7 @@ var config = require('./configDb');
 var connectionString = config.dbString;
 
 require("../model/user.js");
+require("../model/publication.js");
 
 mongoose.connect(connectionString);
 
