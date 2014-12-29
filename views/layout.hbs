@@ -13,6 +13,8 @@
 	<script src="/Utils/publish_or_not_publish.jquery.js" ></script>
 	<script src="/js/renderPubs.js"></script>
 	<script src="/js/init.js"></script>
+	<script src="/Utils/loadingPublish.js"></script>
+
 </head>
 
 <body data-username="{{userName}}">
@@ -63,17 +65,5 @@
 	</div>
 
 
-
-     
-     <script type="text/javascript">
-
- /******* ESTO DEBERIA IR EN UN NUEVO SCRIPT EXTERNO A LAYOUT ********/
-			amplify.subscribe("pageLoaded",function(){
-					$('#loader').plug(true);
-			});
-
-/**********************************************************************/
-
-     </script>
 </body>
 </html>
