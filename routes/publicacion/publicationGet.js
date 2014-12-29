@@ -19,7 +19,6 @@ var getPublication = function(req, res) {
 				"error" : "ERROR: Error al intentar recuperar el usuario de la base de datos."
 			});
 		} else {
-			console.log('No hay error');
 			Publication.find({ creator: userLogged._id }, function(error, publications){
 				if (err) {
 					console.log('ERROR: Error al intentar recuperar las publicaciones del usuario.');
