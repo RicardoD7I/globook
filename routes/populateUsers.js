@@ -115,6 +115,6 @@ for (i = 0; i < users.length; i++) {
 
 };
 
-router.get('/populateUsers', populate);
+//router.get('/populateUsers', populate);
 
 module.exports = router;
