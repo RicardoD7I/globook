@@ -16,6 +16,7 @@
   $("#logoutButton").on("click",function(evt){
     evt.preventDefault();
     amplify.store("userToken", null);
+    amplify.store("loggedInUsername", null);
     location.reload();
   })
   
@@ -47,6 +48,7 @@
         // mostrar el div de comentarios
         if (passwordEsValido) {
           amplify.store("userToken", data.token)
+          amplify.store("loggedInUsername", user);
           
            $("#formulario").removeClass("hidden");
            $("#logoutButton").removeClass("hidden").show();

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Globook || Iniciar Sesion</title>
+
+    <!-- Bootstrap -->
+	<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+	<link href="/stylesheets/style.css" rel="stylesheet">
+
+
+  </head>
+  <body >
+
+	<div class="container">
+		<section class="col-xs-4 col-md-3 col_izq sombra">
+ 			<img src="/img/anigif2.gif" class="img-circle col-xs-12 col-md-12" alt="">
+ 			<h3>Think out of the Box!</h3>
+		</section>
+
+		<section class="col-xs-12 col-md-9 col_der">
+			<div class="list-group col-md-5" style="margin-left:10%">
+
+		  		{{#each users}}
+		  			<a href="/{{@key}}" class="list-group-item">{{this}}</a>
+				{{/each}}
+
+			</div>
+		</section>
+	</div>
+   
+
+  </body>
+</html>

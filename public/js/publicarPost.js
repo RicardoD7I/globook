@@ -6,7 +6,7 @@
 
     evt.preventDefault();
 
-    var username = $("body").data("username");
+    var username = amplify.store("loggedInUsername"); //$("body").data("username");
 
     if (! $("#postText").val() || !  $("#postTitle").val()) {
       alert("Ingrese los datos del formulario")
@@ -32,12 +32,16 @@
         var d = new Date();
         var n = d.toISOString();
 
-        // agregar post en la pagina
-        amplify.publish("onPubReady",[{
-          text: $("#postText").val(),
-          title: $("#postTitle").val(),
-          date : n
-        }])
+        // agregar post en la pagina solo si es el muro del usuario actual
+        if ($("body").data("username") == username) {
+          amplify.publish("onPubReady",[{
+            text: $("#postText").val(),
+            title: $("#postTitle").val(),
+            date : n
+          }])
+
+        }
+
 
         // limpiar campos
         $("#postText").val("");

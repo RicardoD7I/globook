@@ -1,5 +1,86 @@
-extends layout
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Globook || Iniciar Sesion</title>
 
-block content
-  h1= title
-  p Welcome to #{title}
+    <!-- Bootstrap -->
+	<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+	<link href="/stylesheets/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body data-username="{{userName}}">
+
+  	<div id="loader"></div>
+	<div class="container">
+
+		<!-- COLUMNA IZQUIERDA -->
+
+		<section class="col-xs-4 col-md-3 col_izq sombra">
+			<img id="userImg" src="/img/user_pic.jpg" class="img-circle col-xs-12 col-md-12" alt="">
+
+			<h3 id="userNameAndSurname"></h3>
+			<form id="loginForm" class="col-xs-12 col-md-12" action="#">
+				<div class="form-group">
+					<!--<label for="user">User</label>-->
+					<input id="usernameInput" class="form-control" type="text" name="user" placeholder="User">			
+				</div>
+				<div class="form-group">
+					<!--<label for="pass">Password</label>-->
+					<input id="passwordInput"  class="form-control" type="password" name="pass" placeholder="Password">		
+				</div>
+				<div class="form-group">
+					<button id="loginButton" class="btn btn-success pull-right">Entrar</button><br/>		
+				</div>
+			</form>
+			<button id="logoutButton" class="btn btn-success pull-right hidden">Logout</button><br/>		
+		</section><!-- fin COLUMNA IZQUIERDA -->
+
+		<!-- COLUMNA DERECHA -->
+
+		<section class="col-xs-12 col-md-9 col_der">
+
+		    <!--<button class="btn btn-success pull-right">Refresh</button>REFRESH BUTTON-->
+
+	        <article id="formulario"  class="well col-xs-12 col-md-12 sombra hidden">
+
+
+	        		<form action="#">
+	        			<input id="postTitle" class="form-control" type="text" name="user" placeholder="Titulo">	
+	        			<textarea id="postText" name="content" class="form-control" cols="30" rows="3"></textarea>
+	        			<button id="publishPost" class="btn btn-success pull-right" style="margin-top:20px;">Publicar en mi muro!</button><!--PUBLICAR BUTTON-->
+	        		</form>
+	        		
+
+			</article>
+
+		</section><!-- fin COLUMNA DERECHA -->	
+	</div>
+   
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+	<script src="/js/amplify.min.js"></script>
+	
+	<!-- Aplicacion Globook -->
+	<script src="/js/comunication.js"></script>
+	<script src="/js/security.js"></script>
+	<script src="/js/userInfoView.js"></script>
+	<script src="/Utils/publish_or_not_publish.jquery.js" ></script>
+	<script src="/js/renderPubs.js"></script>
+	<script src="/js/init.js"></script>
+	<script src="/Utils/loadingPublish.js"></script>
+	<script src="/js/publicarPost.js"></script>
+	
+  </body>
+</html>
